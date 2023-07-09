@@ -1,0 +1,28 @@
+<mat-toolbar color="primary" class="mat-toolbar">
+
+    <a [routerLink]="'/'" class="example-icon btn_option" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu_books</mat-icon>
+        <span>Portal de facturas</span>
+    </a>
+
+    <div style="display: flex;align-items: center;">
+        <a *ngIf="isLoggedIn" (click)="logout()" style="margin-left: 50px;"
+            class="example-icon favorite-icon ml20" aria-label="Example icon-button with heart icon">
+            <span>Cerrar sesión</span>
+        </a>
+        <button *ngIf="isLoggedIn && user" mat-button style="margin-right: 10px; " 
+            class="example-icon favorite-icon " aria-label="Example icon-button with heart icon">
+            {{user.nombre}}
+        </button>
+        <a *ngIf="!isLoggedIn" [routerLink]="'/login'" class="example-icon favorite-icon btn_option"
+            aria-label="Example icon-button with heart icon" >
+            <span>Iniciar sesión</span>
+        </a>
+        <a *ngIf="!isLoggedIn" [routerLink]="'/signup'"
+            class="example-icon favorite-icon ml20 btn_option" aria-label="Example icon-button with heart icon">
+            <span>Registrar</span>
+        </a>
+    </div>
+
+
+</mat-toolbar>

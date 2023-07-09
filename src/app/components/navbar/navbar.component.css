@@ -1,0 +1,14 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+.btn_option{
+    display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+}
+.mat-toolbar{
+    display: flex;
+    justify-content:space-between; 
+}
